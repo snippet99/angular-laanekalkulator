@@ -1,0 +1,71 @@
+<main role="main" class="container">
+
+	<div class="starter-template jumbotron  ">
+		<h1>Lånekalkulator</h1>
+		<p class="lead">Beregn avdrag, renter og nedbetalingstid</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				Beløp
+			</div>
+			<input class="col-3" type="text" [(ngModel)]="amount"/>
+			<div class="col-3">
+				Rente
+			</div>
+      <input type="number" value="4.5" data-decimals="2" min="0" max="9" step="0.1" [(ngModel)]="interest"/>
+		</div>
+		<div class="row pt-2">
+			<div class="col-3">
+				Løpetid
+			</div>
+				<input class="col-2" type="number" [(ngModel)]="years"/>
+        <!--input class="col-1" type="number" [value]="months"/-->
+			<div class="col-3 offset-1">
+				Gebyr
+			</div>
+				<input class="col-2" type="text" [value]="gebyr"/>
+		</div>
+    <div class="row pt-2">
+      <input class ="col-2 offset-3" type="button" (click)="calculate()" value="Beregn"/>
+    </div>
+    <br/>
+    <div class="row" *ngIf="monthlyPayment > 0">
+      <div class="col"><strong>Terminbeløp {{monthlyPayment | number:'1.0-0'}}</strong></div>
+    </div>
+    <br/>
+    <div class="border"></div>
+
+    <div class="row">
+      <div class="col">
+        <strong>Betalingsplan</strong>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Termin</th>
+            <th>Beløp e/skatt</th>
+            <th>Avdrag</th>
+            <th>Renter</th>
+            <th>Restgjeld</th>
+          </tr>
+          </thead>
+          <tr *ngFor="let term of paymentPlan">
+            <td>{{term.nr}}</td>
+            <td>{{term.terminBelopEtterSkatt | number:'1.0-0'}}</td>
+            <td>{{term.avdrag | number:'1.0-0'}}</td>
+            <td>{{term.rente | number:'1.0-0'}}</td>
+            <td>{{term.restgjeld | number:'1.0-0': 'nb'}} </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+    
+	</div>
+
+</main>
