@@ -54,7 +54,7 @@ export class LoanAppComponent  {
             term.nr = i + 1;
             term.rente = this.getMonthlyInterestAmount(restgjeld, this.interest);
             term.avdrag = this.getMonthlyDownpayment(terminBeloep, term.rente);
-            term.terminBelopEtterSkatt = terminBeloep - (term.rente * 0.28);
+            term.terminBelopEtterSkatt = terminBeloep - (term.rente * 0.22);
             //setter restgjeld som er grunnlag for neste iterasjon
             restgjeld = restgjeld * 1 - term.avdrag * 1;
             term.restgjeld = restgjeld;
