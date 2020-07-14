@@ -21,14 +21,18 @@
 			</div>
 				<input class="col-2" type="number" [(ngModel)]="years"/>
         <!--input class="col-1" type="number" [value]="months"/-->
-			<div class="col-3 offset-1">
+			<!--div class="col-3 offset-1">
 				Gebyr
 			</div>
-				<input class="col-2" type="text" [value]="gebyr"/>
+				<input class="col-2" type="text" [value]="gebyr"/-->
+      <div class="col-2">  
+				<input  type="button" (click)="calculate()" value="Beregn"/>
+			</div>
+        
 		</div>
-    <div class="row pt-2">
+    <!--div class="row pt-2">
       <input class ="col-2 offset-3" type="button" (click)="calculate()" value="Beregn"/>
-    </div>
+    </div-->
     <br/>
     <div class="row" *ngIf="monthlyPayment > 0">
       <div class="col"><strong><h5>Terminbeløp {{monthlyPayment | number:'1.0-0'}}</h5></strong></div>
