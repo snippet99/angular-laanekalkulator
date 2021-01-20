@@ -1,14 +1,24 @@
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 </head>
 <loan-app>loading</loan-app>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145134861-1"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-145134861-1');
+	// Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBE1i95xWHYss3oo9dh1vTInr9zK1E6JCs",
+    authDomain: "loancalc-5110b.firebaseapp.com",
+    databaseURL: "https://loancalc-5110b.firebaseio.com",
+    projectId: "loancalc-5110b",
+    storageBucket: "loancalc-5110b.appspot.com",
+    messagingSenderId: "70710626201",
+    appId: "1:70710626201:web:4dd3caa0be8aa894fc7508"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 </script>
-
