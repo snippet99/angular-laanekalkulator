@@ -8,8 +8,8 @@ import  {Term} from './term';
 })
 export class LoanAppComponent  {
   name = 'Angular';
-  public amount: number = 250000;
-  years: number = 5;
+  public amount: number = 2000000;
+  years: number = 25;
   months: number = 0;
   interest: number = 2.1;
   gebyr: number = 50;
