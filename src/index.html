@@ -1,9 +1,13 @@
 <head>
 	<title>Lånekalkis</title>
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+	<!-- Add the standard Performance Monitoring library -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-performance.js"></script>
 </head>
 <loan-app>loading</loan-app>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -21,4 +25,5 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  var perf = firebase.performance();
 </script>
