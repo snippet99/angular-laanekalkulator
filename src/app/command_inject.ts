@@ -1,2 +1,2 @@
-const code = `console.log("Executing arbitrary code!");`;
-eval(code);
+const userProvidedString = "console.log('This is a user provided string');";
+eval(userProvidedString);
