@@ -21,7 +21,7 @@ var appInsightsName = 'noeheltannet-test-gh-appinsights-${environment}'
 //   location: location  
 // }
 
-module appInsightsModule './modules/appInsights.bicep' = {
+module appInsightsModule './appInsights.bicep' = {
   name: 'appInsightsDeploy'
   scope: resourceGroup(resourceGroupName)
   params: {
