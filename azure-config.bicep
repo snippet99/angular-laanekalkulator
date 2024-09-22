@@ -32,7 +32,7 @@ module appInsightsModule './appInsights.bicep' = {
 }
 
 // web app - WEB
-module webAppServiceModule './modules/webAppService.bicep' = {
+module webAppServiceModule './webAppService.bicep' = {
     name: '${applicationName}${environment}Deploy'  
     scope: resourceGroup(resourceGroupName)  
     params: {
